@@ -9,6 +9,7 @@
         android:id="@+id/tvNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#608C68"
+        android:textSize="16dp" />
 </LinearLayout>

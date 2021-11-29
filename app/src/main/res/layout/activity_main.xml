@@ -7,30 +7,65 @@
     tools:context=".MainActivity"
     android:id="@+id/clMain">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="#E57373"
-        android:fontFamily="sans-serif-black"
-        android:padding="10dp"
-        android:text="Guess number between 0 and 10"
-        android:textAlignment="center"
-        android:textColor="#FFFEFE"
-        android:textSize="16sp"
+        android:layout_height="70dp"
+        android:background="#FF9E80"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="309dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:padding="10dp"
+                android:text="Guess the secret phrase"
+                android:textAlignment="center"
+                android:textColor="#060D32"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Highest score:"
+                android:textAlignment="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@android:color/transparent"
+            android:text="    "
+            android:textAlignment="center"
+            android:textSize="8sp"
+            app:icon="@android:drawable/ic_popup_sync"
+            app:iconSize="35dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="10dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
     </androidx.recyclerview.widget.RecyclerView>
 
@@ -51,8 +86,8 @@
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:ems="15"
-            android:hint="add a number..."
-            android:inputType="number"
+            android:hint="add a letter..."
+            android:inputType="text"
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
@@ -63,7 +98,7 @@
             android:background="#FFE0E0"
             android:text="submit"
             android:textColor="#2A0965"
-            android:textSize="12sp" />
+            android:textSize="10sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
